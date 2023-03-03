@@ -1,0 +1,259 @@
+/* 카테고리별 추천 광고상품 */
+body{
+  width: 1020px;
+  margin: 0 auto;
+}
+
+/* 로고 헤더 */
+header{
+  margin: 100px 0 48px 0;
+}
+
+/* 카테고리별 추천상품 */
+section{
+  margin-bottom: 24px;
+}
+section>p{
+  color: var(--color-gray-900);
+  margin: 0;
+}
+section>h2{
+  margin: 0;
+}
+section>h2>span{
+  color: var(--color-blue-500);
+}
+
+/* 생활용품 + 주방용품 */
+article-group{
+  display: flex;
+}
+.ad-group{
+  display: flex;
+  height: 635px;
+  border-top: 2px solid var(--color-brown-300);
+  border-bottom: 2px solid var(--color-brown-300);
+  margin-bottom: 24px;
+}
+.ad-group-2{
+  display: flex;
+  height: 635px;
+  border-top: 2px solid var(--color-green-700);
+  border-bottom: 2px solid var(--color-green-700);
+  margin-bottom: 24px;
+}
+
+.board-title{
+  width: 174px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.top{
+  margin: 50px 20px 0;
+}
+.h2-1{
+  color: var(--color-brown-300);
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0 0 15px 0;
+}
+.h2-2{
+  color: var(--color-green-700);
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0 0 15px 0;
+}
+.top>a{
+  padding-right: 15px;
+  font-size: 14px;
+  font-weight: bold;
+
+  background-image: url(../../assets/icon/angle-right-default.svg);
+  background-repeat: no-repeat;
+  background-position: 57px;
+}
+.bottom{
+  margin: 0 10px 20px 20px;
+}
+.bottom>h3{
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.keyword-1{
+  margin-top: 10px;
+  display: inline-flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+.keyword-1>a{
+  font-size: 12px;
+  color: var(--color-brown-300);
+  padding: 6px 10px;
+  border: 1px solid var(--color-gray-400);
+  margin-bottom: 12px;
+}
+.keyword-1>a:last-child{
+  margin-bottom: 0;
+}
+.keyword-2{
+  margin-top: 10px;
+  display: inline-flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  padding: 8px 0;
+}
+.keyword-2>a{
+  font-size: 12px;
+  color: var(--color-green-700);
+  padding: 6px 11px;
+  border: 1px solid var(--color-gray-400);
+  margin-bottom: 12px;
+}
+.keyword-2>a:last-child{
+  margin-bottom: 0;
+}
+
+.carousel{
+  width: 360px;
+  height: 100%;
+
+  position: relative;
+}
+.slide-indicator{
+  position: absolute;
+  width: 32px;
+  bottom: 20px;
+  left: calc(50% - 16px);
+  z-index: 3;
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.indicator{
+  border: none;
+  border-radius: 25px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-gray-600);
+}
+.slide-indicator .active{
+  background-color: var(--color-gray-700);
+}
+.slide .active{
+  z-index: 1;
+}
+.slide .slide-img{
+  list-style: none;
+  /* display: none; */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.slide-text-1{
+  color: var(--color-white);
+  width: 260px;
+  height: 90px;
+  background-color: var(--color-brown-300);
+
+  text-align: center;
+  padding-top: 19px;
+
+  position: absolute;
+  bottom: 55px;
+  left: calc(50% - 130px);
+}
+.slide-text-1>p{
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.slide-text-1>span{
+  font-weight: regular;
+  font-size: 14px;
+}
+.slide-text-2{
+  color: var(--color-white);
+  width: 260px;
+  height: 90px;
+  background-color: var(--color-green-700);
+
+  text-align: center;
+  padding-top: 19px;
+
+  position: absolute;
+  bottom: 55px;
+  left: calc(50% - 130px);
+}
+.slide-text-2>p{
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.slide-text-2>span{
+  font-weight: regular;
+  font-size: 14px;
+}
+
+.total-item{
+  position: relative;
+}
+.item-list:first-child::after{
+  content: "";
+  border-bottom: 1px solid var(--color-gray-600);
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+
+  width: 100%;
+  margin: 0 auto;
+}
+.item-list{
+  /* border: 1px solid rgb(248, 31, 251); */
+  width: 540px;
+  display: flex;
+}
+.item:first-child{
+  margin-left: 16px;
+}
+.item:last-child{
+  margin-right: 16px;
+}
+.item{
+  width: 160px;
+  height: 300px;
+  margin: 8px;
+}
+.item-info{
+  margin-top: 12px;
+}
+.item-title{
+  font-size: 14px;
+  font-weight: regular;
+}
+.price-label{
+  margin: 0 0 4px 0;
+  font-size: 14px;
+  color: var(--color-red-500);
+}
+.price-group{
+  display: flex;
+}
+.price{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+.price::after{
+  content: " 원";
+  font-weight: normal;
+  font-size: 14px;
+}
+.price-group>img{
+  margin-left: 6px;
+}
